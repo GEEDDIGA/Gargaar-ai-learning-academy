@@ -96,7 +96,7 @@ const App = () => {
     setLoadingQuiz(false);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
       const languageName = language === 'so' ? 'Somali' : 'English';
       
       const prompt = `You are an expert instructional designer for a corporate training platform. 
@@ -245,7 +245,7 @@ const App = () => {
       setQuizExplanations(newExplanations);
 
       try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
         const languageName = language === 'so' ? 'Somali' : 'English';
         const question = course?.quiz[qIndex].question;
         const correctAnswer = course?.quiz[qIndex].correctAnswer;
