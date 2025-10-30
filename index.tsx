@@ -10,7 +10,7 @@ const App = () => {
   const [isGeneratingCourse, setIsGeneratingCourse] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [course, setCourse] = useState<Course | null>(null); // Use Course type
-  const [language, setLanguage] = useState<'so' | 'en'>('so');
+  const [language, setLanguage] = useState<'so' | 'en'>('en');
   const [quizAnswers, setQuizAnswers] = useState<string[]>([]);
   const [quizFeedback, setQuizFeedback] = useState<Array<'correct' | 'incorrect' | null>>([]);
   const [quizExplanations, setQuizExplanations] = useState<Array<string | null>>([]);
@@ -104,6 +104,7 @@ const App = () => {
       For each lesson, provide a brief one-sentence summary.
       The "Knowledge Check" section should include a mix of multiple-choice and true/false questions.
       The output must be a single, valid JSON object that strictly adheres to the provided schema. Do not include any text, markdown formatting, or code block syntax before or after the JSON object.
+       Use proper, natural grammar and spelling. For Somali: Write with correct Somali grammar as a native speaker would. For English: Use clear, professional language.
       All generated text in the JSON response (titles, outlines, lessons, summaries, quizzes) MUST be in the ${languageName} language.
       `;
       
