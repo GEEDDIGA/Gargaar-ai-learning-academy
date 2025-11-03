@@ -1,0 +1,5 @@
+name = "gargaar-ai-learning-academy"
+compatibility_date = "2025-11-03"
+
+[assets]
+directory = "./dist"
